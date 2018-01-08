@@ -68,6 +68,8 @@ namespace ImageVisualizer
             Image = img;
             Zoom = 1;
             UpdateControls();
+
+            pbPreview.MouseWheel += PbPreview_MouseWheel;
         }
 
         private void UpdateControls()
@@ -204,5 +206,13 @@ namespace ImageVisualizer
         {
             Cursor = Cursors.Default;
         }
+
+        private void PbPreview_MouseWheel(object sender, MouseEventArgs e)
+        {
+            if (ModifierKeys != Keys.Control) return;
+            Zoom += e.Delta / 120;
+            ((HandledMouseEventArgs)e).Handled = true;
+        }
+        
     }
 }
