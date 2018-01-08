@@ -36,8 +36,8 @@
             this.tsslStatusPixelFormat = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslStatusType = new System.Windows.Forms.ToolStripStatusLabel();
             this.pMain = new System.Windows.Forms.Panel();
-            this.pbPreview = new System.Windows.Forms.PictureBox();
             this.tsMain = new System.Windows.Forms.ToolStrip();
+            this.pbPreview = new System.Windows.Forms.PictureBox();
             this.tsddbZoom = new System.Windows.Forms.ToolStripDropDownButton();
             this.tsbCopyImage = new System.Windows.Forms.ToolStripButton();
             this.tsbSaveImage = new System.Windows.Forms.ToolStripButton();
@@ -48,8 +48,8 @@
             this.tscMain.SuspendLayout();
             this.ssMain.SuspendLayout();
             this.pMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).BeginInit();
             this.tsMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).BeginInit();
             this.SuspendLayout();
             // 
             // tscMain
@@ -130,18 +130,6 @@
             this.pMain.Size = new System.Drawing.Size(684, 512);
             this.pMain.TabIndex = 1;
             // 
-            // pbPreview
-            // 
-            this.pbPreview.Location = new System.Drawing.Point(0, 0);
-            this.pbPreview.Name = "pbPreview";
-            this.pbPreview.Size = new System.Drawing.Size(400, 400);
-            this.pbPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbPreview.TabIndex = 0;
-            this.pbPreview.TabStop = false;
-            this.pbPreview.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbPreview_MouseDown);
-            this.pbPreview.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pbPreview_MouseMove);
-            this.pbPreview.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbPreview_MouseUp);
-            // 
             // tsMain
             // 
             this.tsMain.Dock = System.Windows.Forms.DockStyle.None;
@@ -159,10 +147,22 @@
             this.tsMain.Stretch = true;
             this.tsMain.TabIndex = 0;
             // 
+            // pbPreview
+            // 
+            this.pbPreview.Location = new System.Drawing.Point(0, 0);
+            this.pbPreview.Name = "pbPreview";
+            this.pbPreview.Size = new System.Drawing.Size(400, 400);
+            this.pbPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbPreview.TabIndex = 0;
+            this.pbPreview.TabStop = false;
+            this.pbPreview.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbPreview_MouseDown);
+            this.pbPreview.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pbPreview_MouseMove);
+            this.pbPreview.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbPreview_MouseUp);
+            // 
             // tsddbZoom
             // 
             this.tsddbZoom.AutoToolTip = false;
-            this.tsddbZoom.Image = global::ImageVisualizer.Properties.Resources.magnifier;
+            this.tsddbZoom.Image = global::ImageVisualizer.Properties.Resources.Zoom_16x;
             this.tsddbZoom.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsddbZoom.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.tsddbZoom.Name = "tsddbZoom";
@@ -172,7 +172,7 @@
             // tsbCopyImage
             // 
             this.tsbCopyImage.AutoToolTip = false;
-            this.tsbCopyImage.Image = global::ImageVisualizer.Properties.Resources.document_copy;
+            this.tsbCopyImage.Image = global::ImageVisualizer.Properties.Resources.Copy_16x;
             this.tsbCopyImage.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCopyImage.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.tsbCopyImage.Name = "tsbCopyImage";
@@ -183,7 +183,7 @@
             // tsbSaveImage
             // 
             this.tsbSaveImage.AutoToolTip = false;
-            this.tsbSaveImage.Image = global::ImageVisualizer.Properties.Resources.disk_black;
+            this.tsbSaveImage.Image = global::ImageVisualizer.Properties.Resources.Save_16x;
             this.tsbSaveImage.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSaveImage.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.tsbSaveImage.Name = "tsbSaveImage";
@@ -218,6 +218,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Image Visualizer 1.2.0";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.ImageVisualizerForm_Load);
             this.Shown += new System.EventHandler(this.ImageVisualizerForm_Shown);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ImageVisualizerForm_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ImageVisualizerForm_KeyUp);
@@ -232,9 +233,9 @@
             this.ssMain.PerformLayout();
             this.pMain.ResumeLayout(false);
             this.pMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).EndInit();
             this.tsMain.ResumeLayout(false);
             this.tsMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).EndInit();
             this.ResumeLayout(false);
 
         }

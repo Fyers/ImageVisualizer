@@ -74,16 +74,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\document-copy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\disk-black.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\magnifier.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\GitHub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom_16x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
